@@ -1,0 +1,94 @@
+:root {
+  --fg: #f2f2f2;
+  --muted: #b9b9b9;
+  --line: #f2f2f2;
+  --panel-bg: rgba(8, 8, 8, 0.55);
+  --panel-border: rgba(255, 255, 255, 0.18);
+  --max-width: 34rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--fg);
+  font-family: "Courier New", Courier, ui-monospace, SFMono-Regular, Menlo, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.68)),
+    url("skyline-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page {
+  width: 100%;
+  max-width: var(--max-width);
+  text-align: center;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: 2.5rem 1.75rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0 0 2.5rem;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.links li {
+  border-bottom: 1px solid var(--line);
+}
+
+.links a {
+  display: block;
+  padding: 0.85rem 0.5rem;
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: opacity 0.15s ease;
+}
+
+.links a:hover,
+.links a:focus {
+  opacity: 0.6;
+}
+
+footer {
+  margin-top: 2.5rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+footer p {
+  margin: 0;
+}
