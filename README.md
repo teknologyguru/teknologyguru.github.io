@@ -9,6 +9,7 @@ page. Static HTML/CSS, no build step.
 - `style.css` — styling (monochrome, background photo of the Rochester
   skyline)
 - `skyline-bg.jpg` — background photo
+- `favicon.svg` — browser tab icon
 - `wrangler.jsonc` — Cloudflare Workers config (tells it to serve this
   repo's static files)
 
