@@ -10,6 +10,7 @@ page. Static HTML/CSS, no build step.
   skyline)
 - `skyline-bg.jpg` — background photo
 - `favicon.svg` — browser tab icon
+- `_headers` — Cloudflare cache-control rules for static assets
 - `wrangler.jsonc` — Cloudflare Workers config (tells it to serve this
   repo's static files)
 
