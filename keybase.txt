@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/teknologyguru
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.djvc.net
+  * I am teknologyguru (https://keybase.io/teknologyguru) on keybase.
+  * I have a public key with fingerprint A393 3256 FAAF 0F36 DA71  20C2 465A 1648 3F94 6DF8
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012059cd6c39996600dd4652165a5a2414ae96c4ef900a582ca5ce9263c64a5172c00a",
+      "fingerprint": "a3933256faaf0f36da7120c2465a16483f946df8",
+      "host": "keybase.io",
+      "key_id": "465a16483f946df8",
+      "kid": "0101c8a73ee9da0883033b157c2ccf507fa742d17f436120a4d29cd0d78a1a5cb9d10a",
+      "uid": "8341670d06aa7526ff85d01048e11c19",
+      "username": "teknologyguru"
+    },
+    "service": {
+      "hostname": "www.djvc.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1541478035,
+  "expire_in": 157680000,
+  "prev": "0cc4d0daef587a0c3c1b365c4d1b71cad6983f12698b6626f1d21afa431dbe6c",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.80
+Comment: https://keybase.io/crypto
+
+yMNyAnicbVJtUFRVGN41sgHXUYKQipCukwNKO/fcj3PvXWeMypGowVBppvhazp57
+7rICu7hfuDlIflEYSo4UJcVHhEiBJpMhBQaYBVoJRghFKgzZ6AwyWpEktp1l9F/n
+zzvnfZ/3eZ/nPefrhffpQvRr0yKee6oi/5b+bPcHHl36WMSBrYzFofoY01Yml8wF
+kqcSl9uca1MZE8MCjhUVrELMK4oCIcuqqgBFDkARiYgTgICIArFANIVlkShzGImY
+KBzkMRSQCCQO0zwTz2g2u5U4C5w2u5vSIl7heU6EGkIaq/FQRRIdhDlKjQAUZF5T
+BKhqMm3McbgCHVScBbmI0eagOXoxz8n7H/w93SzAMpJ4QhQVsbLMszxvAaKEOYw1
+kZU0JAmcCiRN4CEdjQSVozZZVZIRoBYsigrmdHvm6GReAFBiVRYiJIkc1DRZVOkM
+QSYAYKAEgC7itKN8QtFukmt35DmsPqvH6WGK4hla8towCWw3YOcurLCw0Khu8mKj
+nbgpQYHT4XZgRx6t5LjdBS5ToNPtK5iDEov5LonZYrOrdJm0w0ucLpvDzpgARWK3
+LcAKRPomkszyYjxDthTYnMRsCyBECcosPYE5xBvYEMYC9YuIJsoSYjGPgYWHIk0C
+iwQwUqFC1wo4GiwQUstA5QDSkMAD1UIgZgK2NtsdlJunOpGVcrpsVjtye5yEKerp
+zgjS6UN08++fF/hlupDgxff+XkPLon+ZVN90Gl9f6slOH/DaD5XtK+5pihn+zqj3
+n4oJit245/Xoj1vzv1/hH2sb7RurLYvLHNeupfxdxyiR4RP9t24fT11z8p+nP9f1
+ntu8/Zh+sqx0VXWfZb9hZWRXSjx79PDB5qjU6RcWNKMd0UvDfLgPtXw72dGfMVab
+UKFe+vHEserhLTMru0292f6L2367cf2VQRT1+5MN0avbuveqswOTlafbRg5FjuUV
+PJBYb3y+J+tqQtjOJSU3c1DLkHembYcbbtxb9a76dnZTVL037I/mx0s7+iJ2vVVb
+k3z6l86hCu2jqgEkGzpCE3JWKbuvdZAFr3VF1CQ9+s3FeWcWni/7atE74e9Xv7r/
+1/UrbivX240PGtZzm3be2Z2fXnjZ5zLWPbP8Tbg9rt7edQf8xVZGj0fqTc5HtNrK
+0NhPnzj1w1RCTkn58M/FQ1NrJoYu+FFf8IRq+GSP68SLu7JmLt9KOzsdU1V+I2jw
+5YOxR7Y5odTbMLVsebXDBs/HhYS3lpwsf7iwd/VUsKEnPaNo6Gjo4ffqM8ngS41X
+e/9sajdOnTn3Rvtxqxw8HHQpAwcv/an7s/yW/n1Log6Arma4ISn+seRSf9Xi8flX
+/FWd/QnLjqztvDKS4sz8osY7Gu7/slFOXGdOelYz8bGzDLJktDS2CsnFhg1Fjqwk
+cZY3fnghMcbN1N0cfWjdyH9sqsdB
+=EqVA
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/teknologyguru
+
+==================================================================
