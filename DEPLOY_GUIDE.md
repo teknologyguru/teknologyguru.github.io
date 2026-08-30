@@ -1,8 +1,9 @@
-# djvc.net — Migration Guide: Static VM → Cloudflare Pages
+# djvc.net — Migration Guide: Static VM → Cloudflare Workers
 
 This walks you from where you are now (old iWeb HTML, hosted on a Linux VM
 at home, repo at `teknologyguru/teknologyguru.github.io`) to a Cloudflare
-Pages site that redeploys automatically every time you `git push`.
+Workers (static assets) site that redeploys automatically every time you
+`git push`.
 
 ---
 
@@ -11,10 +12,10 @@ Pages site that redeploys automatically every time you `git push`.
 - You already have: a GitHub repo, a Cloudflare account, and `djvc.net`
   registered/managed in that Cloudflare account.
 - New files provided: `index.html`, `style.css`, `wrangler.jsonc`,
-  `skyline-bg.jpg` (the Rochester skyline background photo). Replace the
-  alias
-  placeholder in `index.html` (`REPLACE_ME@simplelogin.co`) with your real
-  SimpleLogin alias before pushing.
+  `skyline-bg.jpg` (background photo), `favicon.svg` (tab icon), `_headers`
+  (cache rules for the photo). 
+- Replace the alias placeholder in `index.html` (`REPLACE_ME@simplelogin.co`)
+  with your real SimpleLogin alias before pushing.
 - Decide now whether you want to keep the old `gallery/` photos directory
   in the repo. It's dropped from the new homepage's nav, but the files can
   stay in the repo and still be reachable at `djvc.net/gallery/` if you
@@ -37,8 +38,9 @@ Pages site that redeploys automatically every time you `git push`.
    - Old `_config.yml` if it was only there for Jekyll defaults you're not
      using anymore — a plain static site doesn't need Jekyll at all, so
      this file becomes optional either way.
-3. Copy in the four new files (`index.html`, `style.css`, `wrangler.jsonc`,
-   `skyline-bg.jpg`) at the repo root, overwriting the old `index.html`.
+3. Copy in the six new files (`index.html`, `style.css`, `wrangler.jsonc`,
+   `skyline-bg.jpg`, `favicon.svg`, `_headers`) at the repo root,
+   overwriting the old `index.html`.
 4. Commit and push:
    ```
    git add -A
@@ -98,8 +100,19 @@ same idea — connect the repo, auto-deploy on push — just a renamed path.
    `www.djvc.net` if you want that to work too).
 3. Because `djvc.net` is already on this same Cloudflare account, Cloudflare
    will create the necessary DNS record automatically — accept that.
+
+   **If you get an error like "Hostname 'djvc.net' already has externally
+   managed DNS records (A, CNAME, etc.)"**: your zone still has the old
+   record pointing at your home VM. Go to **DNS → Records** in the
+   dashboard, find the record where **Name** is `djvc.net` (or `@`) — it's
+   likely an A record pointing at your VM's IP — and delete it (and any
+   `www` record if you're also connecting that). Leave MX/email records
+   alone. Then retry adding the custom domain.
 4. Wait for the DNS/SSL status to show **Active** (usually a couple of
-   minutes, sometimes a bit longer for certificate issuance).
+   minutes, sometimes a bit longer for certificate issuance). Note that
+   even once it's active, your browser or a fetch tool may still show
+   stale/cached content for a bit — hard-refresh or check in an incognito
+   window before assuming something's wrong.
 
 ---
 
@@ -112,7 +125,7 @@ same idea — connect the repo, auto-deploy on push — just a renamed path.
    git commit -m "Test auto-deploy"
    git push origin master
    ```
-3. In the Cloudflare Pages dashboard, watch the **Deployments** tab — a
+3. In the Cloudflare dashboard, watch the Worker's **Deployments** tab — a
    new deployment should kick off within seconds of the push and finish
    in well under a minute for a static site like this.
 4. Reload `djvc.net` (hard-refresh / incognito to dodge cache) and confirm
@@ -120,6 +133,13 @@ same idea — connect the repo, auto-deploy on push — just a renamed path.
 
 From here on, every `git push` to `master` = a new deployment. No manual
 steps, no server to maintain.
+
+**Unrelated git error you might hit:** if a commit fails with something
+like `error: Couldn't get agent socket?` / `fatal: failed to write commit
+object`, that's a local SSH-agent/commit-signing issue on your machine —
+nothing to do with this deploy setup. Either start your SSH agent
+(`eval "$(ssh-agent -s)"` then `ssh-add`) or, if you don't need signed
+commits, disable signing for this repo: `git config commit.gpgsign false`.
 
 ---
 
@@ -150,5 +170,4 @@ git add -A
 git commit -m "describe your change"
 git push origin master
 ```
-Cloudflare Pages picks it up automatically — that's the whole deploy
-process.
+Cloudflare picks it up automatically — that's the whole deploy process.

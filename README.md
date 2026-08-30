@@ -11,6 +11,8 @@ page. Static HTML/CSS, no build step.
 - `skyline-bg.jpg` — background photo
 - `favicon.svg` — browser tab icon
 - `_headers` — Cloudflare cache-control rules for static assets
+- `icons/` — line-icon SVGs shown next to each link (email, GitHub,
+  Instagram, last.fm, LinkedIn)
 - `wrangler.jsonc` — Cloudflare Workers config (tells it to serve this
   repo's static files)
 

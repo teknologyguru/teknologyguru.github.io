@@ -69,13 +69,20 @@ h1 {
 }
 
 .links a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   padding: 0.85rem 0.5rem;
   color: var(--fg);
   text-decoration: none;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
   transition: opacity 0.15s ease;
+}
+
+.links .icon {
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 .links a:hover,
