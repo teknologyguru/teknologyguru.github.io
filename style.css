@@ -71,6 +71,7 @@ h1 {
 .links a {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.65rem;
   padding: 0.85rem 0.5rem;
   color: var(--fg);
