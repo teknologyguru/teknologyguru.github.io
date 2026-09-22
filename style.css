@@ -69,10 +69,11 @@ h1 {
 }
 
 .links a {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20px 11ch;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
+  column-gap: 0.65rem;
   padding: 0.85rem 0.5rem;
   color: var(--fg);
   text-decoration: none;
@@ -82,8 +83,12 @@ h1 {
 }
 
 .links .icon {
-  flex-shrink: 0;
   opacity: 0.85;
+  justify-self: center;
+}
+
+.links .label {
+  text-align: left;
 }
 
 .links a:hover,
