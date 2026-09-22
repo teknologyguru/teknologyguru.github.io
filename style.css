@@ -74,7 +74,7 @@ h1 {
   align-items: center;
   justify-content: center;
   column-gap: 0.65rem;
-  padding: 0.85rem 0.5rem;
+  padding: 0.85rem 0.5rem 0.85rem calc(0.5rem + 20px);
   color: var(--fg);
   text-decoration: none;
   font-size: 0.95rem;
